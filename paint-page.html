@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon.png">
+    <title>JS Paint</title>
+    <link rel="stylesheet" href="css/paint.css">
+</head>
+
+<body>
+    <!-- this is the navigation part -->
+
+    <nav id="navbar">
+        <div id="nav-item1" class="nav-item1">
+            <a href="index.html">Home</a>
+            <a href="paint-page.html" style="font-weight: 600;">Paint</a>
+            <a href="updates.html">Updates</a>
+            <a href="aboutus.html">About Us</a>
+        </div>
+
+        <div class="menu_icon" onclick="toggle()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div id="nav-item2">
+            <img src="images/icon.png" alt="error">
+            <h1>JS PAINT</h1>
+        </div>
+    </nav>
+
+    <!-- for mobile -->
+    <div class="warning">
+       &cross; Warning: Don't use mobile for better experience.
+    </div>
+    
+
+
+
+
+    <!-- the body part -->
+
+    <div class="body3">
+
+        <div id="controls" class="drop-shadow">
+            <a class='round-button' onclick=lineColor(2) style="background:blue; grid-area: blue;"></a>
+            <a class='round-button' onclick=lineColor(1) style="background:black; grid-area: black;"></a>
+            <a class='round-button' onclick=lineColor(3) style="background:green; grid-area: green;"></a>
+            <a class='round-button' onclick=lineColor(4) style="background:red; grid-area: red;"></a>
+            <a class='round-button' onclick=lineColor(5) style="background:yellow; grid-area: yellow;"></a>
+            <a class='round-button' onclick=lineColor(6) style="background:orange; grid-area: orange;"></a>
+            <a class='round-button' onclick=lineColor(7) style="background:pink; grid-area: pink;"></a>
+            <a class='round-button' onclick=lineColor(8) style="background:brown; grid-area: brown;"></a>
+
+            <button class='square-button' onclick=lineColor(9)
+                style="color: black; grid-area: eraser;">Erase</button>
+
+            <button class='square-button' onclick=clearCanvas()
+                style="color: black; grid-area: clear;">Clear</button>
+
+            <button class='square-button' onclick=downloadCanvas()
+                style="color: black; grid-area: download;">Download as PNG</button>
+
+            <input type="color" oninput="color = this.value" onclick="cur_tool = 'Colour Picker';
+            changeTool();" id="color_input" style="grid-area: pick_color">
+
+            <button type="buttton" onclick="undo()" class="square-button" style="grid-area: undo">Undo</button>
+            <!-- <button type="buttton" onclick="Redo()" class="square-button">Redo</button> -->
+
+            <h4 style='grid-area: current; color: black;' id="tool">Current Tool:</h4>
+            
+            <form style=" grid-area: line;">
+                <label for="lineStroke" id="width_point" >Line Width: 3</label>
+                <input type="range"  id="width_range" value="3" min="1" max="20" onchange="strokeForm();">
+                <!-- <input value="5" type="number" id="lineStroke" style="grid-area: two; width: 72px; height: 20px;" />
+                <input type="button" onclick="strokeForm();" value="Change" class="square-button"
+                    style="grid-area: three; justify-self: end; height: fit-content; width: 72px;" /> -->
+            </form>
+        </div>
+
+        <div id="board-container" class="board-container">
+            <canvas id="board" class="drop-shadow"></canvas>
+        </div>
+
+    </div>
+    <script src="js/paint.js"></script>
+    
+    <script>
+        function toggle() {
+          var x = document.getElementById("nav-item1");
+          if (x.className === "nav-item1") {
+          x.className = "toggle_menu";
+          }
+          else {
+            x.className = "nav-item1";
+          }
+        }
+    </script>
+</body>
+
+</html>

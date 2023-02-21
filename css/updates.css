@@ -1,0 +1,141 @@
+/* css reset */
+*{
+    margin: 0%;
+    padding: 0%;
+    height: auto;
+   
+}
+body{
+    background-color: #ffffff;
+    color: black;
+    height: 100%;
+    font-family: 'Baloo 2', cursive;
+    margin-bottom: 50px;
+}
+a{
+    text-decoration: none;
+    color: #286f84;
+    /* font-family: 'Times New Roman', Times, serif; */
+}
+
+
+/* navigation bar design */
+#navbar{
+    background-color: #b4ebf3;
+    background-color: #cbe7f8;
+    height: auto;
+    width: auto;
+    margin: 2px;
+    padding: 5px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navbar img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+} 
+
+.nav-item1{
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+}
+
+#nav-item2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    padding: 0px 10px;
+}
+#nav-item2>h1{
+    font-family: 'Baloo 2';
+}
+nav a{
+    font-size: 1.2rem;
+    /* border: 2px solid red; */
+    margin: 0px 20px;
+    /* font-weight: bold; */
+    color: #008cba;
+    color: black;
+    font-family: 'baloo 2';
+    text-transform: uppercase;
+}
+
+.menu_icon{
+    /* background-color: black; */
+    display: none;
+}
+
+.nav-item1 a:hover{
+    opacity: 0.5;
+    transition: 1s;
+}
+
+/* body design */
+.blogs_lr{
+    margin-bottom: 2px;
+    padding: 10px 50px;
+    background: linear-gradient(to right, #aadaf8, #f7fcff);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+@media (max-width: 800px) {
+    .menu_icon{
+        /* background-color: black; */
+        display: block;
+        width: 30px;
+        padding: 0px 20px;
+    }
+    .menu_icon>div{
+        background-color: black;
+        display: block;
+        margin: 2px;
+        width: 18px;
+        height: 3px;
+    }
+    .nav-item1{
+        display: none;
+    }
+    .toggle_menu{
+        height: fit-content;
+        display: flex;
+        flex-flow: column nowrap;
+        grid-area: 2/1/3/3;
+        margin: 0px;
+    }
+    .toggle_menu > a:hover{
+        background-color: white;
+        width: 100%;
+        transition: 1s;
+    }
+
+    #navbar{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+    }
+
+    #nav-item2{
+        justify-self: end;
+    }
+    nav a{
+        margin: 0px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        width: 20%;
+    }
+
+}
+@media (max-width: 522px){
+    nav a{
+        width: 50%;
+    }
+}

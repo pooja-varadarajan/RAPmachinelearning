@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates</title>
+    <link rel="stylesheet" href="css/updates.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon.png">
+</head>
+<body>
+    <!-- this is the navigation part -->
+
+    <nav id="navbar">
+        <div id="nav-item1" class="nav-item1">
+            <a href="index.html" >Home</a>
+            <a href="paint-page.html">Paint</a>
+            <a href="updates.html"  style="font-weight: 600;">Updates</a>
+            <a href="aboutus.html">About Us</a>
+        </div>
+
+        <div class="menu_icon" onclick="toggle()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div id="nav-item2">
+            <img src="images/icon.png" alt="error">
+            <h1>JS PAINT</h1>
+        </div>
+
+    </nav>
+
+    <h1 style="text-align: center;">Updates<span style="color: red;">.</span></h1>
+
+    <!-- ad section -->
+    <div style="height: 100px;"></div>
+
+    <!-- blogs parts -->
+
+    <div class="blogs_lr">
+        <h3 style="color: royalblue;">System Updates<span style="font-size: 1.5rem; color: red;">.</span></h3>
+        <p>
+            &check; Undo Function Now Updated. <br>
+            &check; This Site is Now Responsive. <br>
+            &check; <a href="paint-page.html">Use Paint</a>
+        </p>
+        <span style="color: salmon;">Date: 01.14.2022</span>
+    </div>
+
+    <div class="blogs_lr">
+        <h3 style="color: royalblue;">January Updates<span style="font-size: 1.5rem; color: red;">.</span></h3>
+        <p> Many users requested to us to add undo function and now we are working for it.
+            Not only undo we are working for 1 step undo and 1 step redo function in js paint.
+            We hope very soon we can undo our mistakes on drawing.
+        </p>
+        <span style="color: salmon;">Date: 01.05.2022</span>
+    </div>
+
+    <div class="blogs_lr">
+        <h3 style="color: royalblue;">Theme Updates<span style="font-size: 1.5rem; color: red;">.</span></h3>
+        <p>We have now updated our user interface of the website.
+            Changed the color theme from Redish to Bluish.
+        </p>
+        <span style="color: salmon;">Date: 01.05.2022</span>
+    </div>
+
+    <script>
+        function toggle() {
+          var x = document.getElementById("nav-item1");
+          if (x.className === "nav-item1") {
+          x.className = "toggle_menu";
+          }
+          else {
+            x.className = "nav-item1";
+          }
+        }
+        </script>
+</body>
+</html>
